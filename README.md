@@ -92,4 +92,4 @@ hugo serve --bind=0.0.0.0 --port=8080 --baseURL=http://<my-ip>/
 Click on the provided link.
 
 ##### Generate static pages
-Simply run `hugo` to generate the required static files. The static files are available in the `public` folder.
+Simply run `hugo` to generate the required static files. The static files are available in the `public` folder. Do not commit the public folder.
