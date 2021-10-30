@@ -56,7 +56,7 @@ Enable use of Git submodules.
 
 Enable webhook so that the build can be trigger.
 
-Use standard/default for other options.
+Use standard/default for other options. Note: when picking a managed image, if Amazon Linux is selected for the build environment, pick a _x86-64_ image and not _aarch64_.
 
 Either create a new service role or use an existing one if available.
 
