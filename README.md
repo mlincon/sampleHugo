@@ -24,6 +24,29 @@ cat /home/ec2-user/.ssh/id_rsa.pub
 ### EC2 Port
 Add a new security group to the EC2 and open port `8080` to all incoming traffic.
 
+
+### S3 Bucket Policy for Public Content
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "s3:GetObject"
+            ],
+             "Resource": [
+                "arn:aws:s3:::<unique-bucket-name>/*"
+            ]
+        }
+    ]
+}
+```
+
+
+
 ## Create a new Hugo Site
 
 Create a new Hugo site in the current directory
@@ -52,4 +75,5 @@ hugo serve --bind=0.0.0.0 --port=8080 --baseURL=http://<my-ip>/
 ```
 Click on the provided link.
 
-
+### Generate static pages
+Simply run `hugo` to generate the required static files. The static files are available in the `public` folder.
