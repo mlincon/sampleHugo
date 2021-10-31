@@ -39,15 +39,21 @@ Create a public bucket
             "Effect": "Allow",
             "Principal": "*",
             "Action": [
-                "s3:GetObject"
+                "s3:ListBucket",
+                "s3:GetObject",
+                "s3:PutObject"
             ],
-             "Resource": [
-                "arn:aws:s3:::<unique-bucket-name>/*"
+            "Resource": [
+                "arn:aws:s3:::hugo-static-web-mooc",
+                "arn:aws:s3:::hugo-static-web-mooc/*"
             ]
         }
     ]
 }
 ```
+We will be using the `aws sync` command which makes the following API calls: `ListObjectsV2`, `CopyObject`, `GetObject`, and `PutObject`.
+
+Note: Some resources like `s3:ListBucket` accept ARN with the full name like `arn:aws:s3:::bucket_name`, while `GetObject` or `PutObject` expects a `/*` after the `bucket_name`.
 
 ##### CodeBuild
 Create a CodeBuild project and connect to Github, for example, via Personal Access Token (PAT).
