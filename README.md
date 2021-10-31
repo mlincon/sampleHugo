@@ -1,5 +1,7 @@
 ## Setup
 
+![Setup](/documentation/setup.jpg)
+
 ### Cloud9
 Use the default options
 
