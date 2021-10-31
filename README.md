@@ -3,7 +3,7 @@
 ![Setup](/documentation/setup.jpg)
 
 ### Cloud9
-Use the default options
+Use the default options.
 
 ##### Setup Hugo
 Download the _extended_ version of Hugo and put it in the `~/bin/` folder. Here version `0.88.1` is used.
@@ -101,3 +101,7 @@ Click on the provided link.
 
 ##### Generate static pages
 Simply run `hugo` to generate the required static files. The static files are available in the `public` folder. Do not commit the public folder.
+
+
+## Refernce:
+- https://github.com/noahgift/dukehugofeb1
