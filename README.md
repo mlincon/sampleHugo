@@ -2,7 +2,7 @@
 
 ![Setup](/documentation/setup.jpg)
 
-### Cloud9
+##### Cloud9
 Use the default options.
 
 ##### Setup Hugo
